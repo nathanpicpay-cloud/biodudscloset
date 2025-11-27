@@ -1,20 +1,12 @@
 import { GoogleGenAI } from "@google/genai";
 
-const apiKey = process.env.API_KEY || '';
-
-// Initialize client only if key exists, otherwise we mock behavior for UI demo
-const ai = apiKey ? new GoogleGenAI({ apiKey }) : null;
+// Initialize client directly assuming API key is available as per guidelines
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 export const sendMessageToAssistant = async (
   message: string,
   history: { role: string; parts: { text: string }[] }[]
 ): Promise<string> => {
-  if (!ai) {
-    // Fallback/Demo mode if no API key is present
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    return "Olá! Sou sua assistente virtual da Duds Closet. Como ainda não fui configurada com uma chave de API, estou operando em modo de demonstração visual. Como posso ajudar você a encontrar o look perfeito hoje?";
-  }
-
   try {
     const chat = ai.chats.create({
       model: 'gemini-2.5-flash',
