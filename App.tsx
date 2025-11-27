@@ -94,6 +94,15 @@ export default function App() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [isAssistantOpen, setIsAssistantOpen] = useState(false);
 
+  // Links
+  const WHATSAPP_URL = "https://wa.me/5571996825633";
+  const INSTAGRAM_URL = "https://www.instagram.com/dudscloset._/";
+  const STORE_URL = "https://dudscloset.vercel.app/";
+
+  const handleOpenLink = (url: string) => {
+    window.open(url, '_blank');
+  };
+
   return (
     <div className="min-h-screen bg-brand-bg font-sans selection:bg-brand-rose/30">
       
@@ -112,6 +121,7 @@ export default function App() {
           src="https://imgur.com/TgZhBnf.png" 
           alt="Duds Closet" 
           className="h-16 md:h-20 object-contain hover:opacity-90 transition-opacity cursor-pointer" 
+          onClick={() => window.scrollTo(0,0)}
         />
       </header>
 
@@ -131,7 +141,7 @@ export default function App() {
             <p className="text-lg text-brand-deep/80 leading-relaxed max-w-md">
               Consultoria para mulheres que desejam aprender a se vestir com confiança e <strong>destacar sua imagem profissional e pessoal</strong>.
             </p>
-            <Button onClick={() => window.open('https://wa.me/55000000000', '_blank')}>
+            <Button onClick={() => handleOpenLink(WHATSAPP_URL)}>
               QUERO ME DESTACAR <ArrowRight size={18} />
             </Button>
           </div>
@@ -258,7 +268,9 @@ export default function App() {
           </div>
 
           <div className="mt-16 text-center">
-            <Button>COMECE SUA TRANSFORMAÇÃO <Sparkles size={16} /></Button>
+            <Button onClick={() => handleOpenLink(WHATSAPP_URL)}>
+              COMECE SUA TRANSFORMAÇÃO <Sparkles size={16} />
+            </Button>
           </div>
         </div>
       </section>
@@ -347,7 +359,10 @@ export default function App() {
                 <li className="flex items-center gap-3"><Check size={18} className="text-brand-gold" /> Agendamento flexível</li>
               </ul>
 
-              <button className="w-full py-5 rounded-xl bg-brand-gold text-brand-deep font-bold text-lg tracking-wide hover:bg-white transition-all duration-300 flex items-center justify-center gap-3 shadow-lg">
+              <button 
+                onClick={() => handleOpenLink(WHATSAPP_URL)}
+                className="w-full py-5 rounded-xl bg-brand-gold text-brand-deep font-bold text-lg tracking-wide hover:bg-white transition-all duration-300 flex items-center justify-center gap-3 shadow-lg"
+              >
                 <MessageCircle size={20} />
                 INICIAR CONVERSA
               </button>
@@ -363,7 +378,7 @@ export default function App() {
                   <div className="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
                   <div className="w-3 h-3 rounded-full bg-[#27c93f]"></div>
                   <div className="ml-4 flex-1 h-6 bg-[#1a1a1a] rounded-md flex items-center px-3">
-                    <span className="text-[10px] text-gray-500 font-sans">dudscloset.com.br</span>
+                    <span className="text-[10px] text-gray-500 font-sans">dudscloset.vercel.app</span>
                   </div>
                 </div>
 
@@ -380,7 +395,10 @@ export default function App() {
                     <p className="font-serif text-2xl text-white mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">Loja Oficial</p>
                     <p className="text-brand-nude mb-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">Explore nossa coleção completa</p>
                     
-                    <button className="py-3 px-8 rounded-full border border-white text-white font-bold hover:bg-white hover:text-brand-deep transition-all duration-300 flex items-center gap-2 translate-y-4 group-hover:translate-y-0 delay-100">
+                    <button 
+                      onClick={() => handleOpenLink(STORE_URL)}
+                      className="py-3 px-8 rounded-full border border-white text-white font-bold hover:bg-white hover:text-brand-deep transition-all duration-300 flex items-center gap-2 translate-y-4 group-hover:translate-y-0 delay-100"
+                    >
                       ACESSAR SITE <ExternalLink size={16} />
                     </button>
                   </div>
@@ -389,7 +407,10 @@ export default function App() {
               
               {/* Mobile/Default button logic if not hovering (optional text below) */}
               <div className="bg-white/5 border border-white/10 border-t-0 rounded-b-3xl p-6 lg:hidden">
-                 <button className="w-full py-4 rounded-xl border border-white/30 text-white font-bold tracking-wide hover:bg-white hover:text-brand-deep transition-all">
+                 <button 
+                  onClick={() => handleOpenLink(STORE_URL)}
+                  className="w-full py-4 rounded-xl border border-white/30 text-white font-bold tracking-wide hover:bg-white hover:text-brand-deep transition-all"
+                 >
                     CONHECER O SITE DA LOJA
                  </button>
               </div>
@@ -411,7 +432,7 @@ export default function App() {
           <div className="grid md:grid-cols-3 gap-6">
             {[
               { title: "GUIA DE ESTILO PARA O DIA", icon: <Star className="text-brand-wine w-10 h-10" />, desc: "Um e-book completo que ensina a montar combinações práticas e estilosas." },
-              { title: "CHECKLIST DE GUARDA-ROUPA", icon: <Check className="text-brand-wine w-10 h-10" />, desc: "Peças essenciais que não podem faltar em um guarda-roupa funcional." },
+              { title: "CHECKLIST DE GUARDA-ROUPA", icon: <Check className="text-brand-wine w-10 h-10" />, desc: "Peças essenciais que não podem faltar em um guarda-roupa funcional e elegante." },
               { title: "ACESSO A GRUPO VIP", icon: <Gem className="text-brand-wine w-10 h-10" />, desc: "Um grupo exclusivo com dicas diárias, tendências e inspirações." }
             ].map((bonus, idx) => (
               <div key={idx} className="bg-white p-8 rounded-[2rem] shadow-lg border-b-4 border-brand-wine text-center hover:-translate-y-2 transition-transform">
@@ -424,7 +445,9 @@ export default function App() {
             ))}
           </div>
           <div className="mt-12 text-center">
-            <Button>QUERO MEUS BÔNUS <ArrowRight size={16}/></Button>
+            <Button onClick={() => handleOpenLink(WHATSAPP_URL)}>
+              QUERO MEUS BÔNUS <ArrowRight size={16}/>
+            </Button>
           </div>
         </div>
       </section>
@@ -480,15 +503,15 @@ export default function App() {
       <footer className="bg-brand-deep text-brand-nude py-12 text-center border-t border-white/10">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="font-serif text-2xl text-white mb-8">DUDS CLOSET</h2>
-          <Button variant="outline" onClick={() => window.scrollTo(0,0)}>
+          <Button variant="outline" onClick={() => handleOpenLink(WHATSAPP_URL)}>
              QUERO MINHA MELHOR VERSÃO <ArrowRight size={16} />
           </Button>
           
           <div className="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs tracking-wider opacity-60">
             <p>Copyright © 2024 Estilo Ascendente | Todos os direitos reservados.</p>
             <div className="flex gap-4">
-               <Instagram className="hover:text-brand-gold cursor-pointer transition-colors" size={20} />
-               <MessageCircle className="hover:text-brand-gold cursor-pointer transition-colors" size={20} />
+               <Instagram onClick={() => handleOpenLink(INSTAGRAM_URL)} className="hover:text-brand-gold cursor-pointer transition-colors" size={20} />
+               <MessageCircle onClick={() => handleOpenLink(WHATSAPP_URL)} className="hover:text-brand-gold cursor-pointer transition-colors" size={20} />
             </div>
           </div>
         </div>
