@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { 
   Check, 
@@ -385,7 +386,7 @@ export default function App() {
                 {/* Website Content Preview */}
                 <div className="relative h-[400px] md:h-auto md:flex-grow bg-white overflow-hidden group-hover:scale-[1.01] transition-transform duration-500 origin-bottom">
                   <img 
-                    src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                    src="https://i.imgur.com/KEuDq38.png" 
                     alt="Loja Duds Closet" 
                     className="w-full h-full object-cover object-top opacity-90 transition-transform duration-[2s] ease-in-out group-hover:scale-110"
                   />
