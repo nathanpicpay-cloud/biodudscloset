@@ -291,9 +291,9 @@ export default function App() {
                   <div><p className="font-bold text-sm text-gray-800">Patrícia</p><p className="text-xs text-gray-500">online</p></div>
                 </div>
                 <ChatBubble isLeft={false} time="12:02" text="Oi, Mari! Só passando para te agradecer pela consultoria... Ela é simplesmente maravilhosa! Me sinto muito mais confiante!" />
-                <ChatBubble isLeft={true} name="Marina" time="12:15" text="Olá, Pati! Ai, que alegria saber disso! 🥰" />
+                <ChatBubble isLeft={true} name="Duda" time="12:15" text="Olá, Pati! Ai, que alegria saber disso! 🥰" />
                 <ChatBubble isLeft={false} time="12:20" text="E eu tô ainda mais feliz! Me sinto muito mais confiante agora! Essa repaginada me fez muito bem..." />
-                <ChatBubble isLeft={true} name="Marina" time="12:25" text="Que maravilha, Pati! Uhuu!!!" />
+                <ChatBubble isLeft={true} name="Duda" time="12:25" text="Que maravilha, Pati! Uhuu!!!" />
               </div>
             </div>
 
@@ -306,7 +306,7 @@ export default function App() {
                   <div><p className="font-bold text-sm text-gray-800">Júlia</p><p className="text-xs text-gray-500">online</p></div>
                 </div>
                 <ChatBubble isLeft={false} time="14:13" text="Amei incrível, Mari! A consultoria me ajudou a montar um guarda-roupa que me valoriza, sem exagero e com peças práticas 😍" />
-                <ChatBubble isLeft={true} name="Marina" time="14:20" text="Oi, Júlia! Fico tão feliz com o seu feedback! Gratidão! 🙏" />
+                <ChatBubble isLeft={true} name="Duda" time="14:20" text="Oi, Júlia! Fico tão feliz com o seu feedback! Gratidão! 🙏" />
                 <ChatBubble isLeft={false} time="14:35" text="Eu que agradeço para toda a sua ajuda e seus ensinamentos, Mari! ❤️" />
               </div>
             </div>
@@ -320,7 +320,7 @@ export default function App() {
                   <div><p className="font-bold text-sm text-gray-800">Carla</p><p className="text-xs text-gray-500">online</p></div>
                 </div>
                 <ChatBubble isLeft={false} time="09:17" text="Mari do céu! Foi uma experiência libertadora! Me sinto mais confiante no trabalho e em situações sociais." />
-                <ChatBubble isLeft={true} name="Marina" time="09:25" text="Ai, que lindo ler a sua mensagem, Carla! É um prazer poder te ajudar. Continue contando comigo! ✨" />
+                <ChatBubble isLeft={true} name="Duda" time="09:25" text="Ai, que lindo ler a sua mensagem, Carla! É um prazer poder te ajudar. Continue contando comigo! ✨" />
                 <ChatBubble isLeft={false} time="09:40" text="Você me ensinou tanto, Mari! Eu nem tenho palavras..." />
                 <ChatBubble isLeft={false} time="09:42" text="Ahh, eu que agradeço para toda sua confiança, querida!" />
               </div>
@@ -456,7 +456,7 @@ export default function App() {
       <section className="py-24 bg-brand-deep overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
           <div className="text-white space-y-6">
-            <h2 className="font-serif text-4xl text-brand-gold">Prazer, Marina Bitencourt</h2>
+            <h2 className="font-serif text-4xl text-brand-gold">Prazer, Duda Ribeiro</h2>
             <div className="w-20 h-1 bg-brand-wine"></div>
             <p className="text-brand-nude/90 leading-relaxed font-light">
               Eu sou consultora de moda e imagem pessoal com <strong>mais de 10 anos de experiência</strong>, ajudo mulheres a se vestirem com confiança e sofisticação.
@@ -473,8 +473,8 @@ export default function App() {
               <div className="absolute inset-0 border-2 border-brand-gold rounded-[100px] transform -rotate-6"></div>
               <div className="absolute inset-0 border-2 border-brand-wine rounded-[100px] transform rotate-3"></div>
               <img 
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                alt="Marina Bitencourt" 
+                src="https://i.imgur.com/jqiG8nv.png" 
+                alt="Duda Ribeiro" 
                 className="w-full h-full object-cover rounded-[100px] shadow-2xl relative z-10"
               />
             </div>
