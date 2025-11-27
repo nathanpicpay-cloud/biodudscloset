@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Duds Closet - Estilo Ascendente</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Playfair Display"', 'serif'],
+              sans: ['"Lato"', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                bg: '#FFFCFA',     // Ultra soft warm white
+                soft: '#F9F0F2',   // Very pale rose
+                nude: '#EAD8D8',   // Dusty nude
+                rose: '#C59EA3',   // Muted rose
+                wine: '#8E5258',   // Elegant wine for buttons/accents
+                deep: '#5E4044',   // Dark brownish wine for text
+                gold: '#D4B08C',   // Muted gold for borders
+                dark: '#2D2426',   // Soft black
+              }
+            },
+            backgroundImage: {
+              'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+              'hero-glow': 'conic-gradient(from 180deg at 50% 50%, #F9F0F2 0deg, #FFFCFA 180deg, #F9F0F2 360deg)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Smooth scroll behavior */
+      html { scroll-behavior: smooth; }
+      /* Custom scrollbar */
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: #FFFCFA; }
+      ::-webkit-scrollbar-thumb { background: #C59EA3; border-radius: 4px; }
+      
+      .glass-card {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+      }
+      
+      .text-shadow-sm {
+        text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
